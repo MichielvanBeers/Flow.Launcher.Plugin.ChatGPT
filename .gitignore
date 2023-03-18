@@ -128,5 +128,5 @@ dmypy.json
 .pyre/
 
 # Config and temp plugin files
-system_message.csv
+system_messages.csv
 temp_text.txt
