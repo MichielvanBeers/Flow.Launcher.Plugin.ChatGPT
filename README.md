@@ -1,1 +1,1 @@
-# -Flow.Launcher.Plugin.ChatGPT
+# Flow.Launcher.Plugin.ChatGPT
