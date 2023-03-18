@@ -6,7 +6,7 @@
     "Author": "Flow Launcher",
     "Version": "0.0.1",
     "Language": "python",
-    "Website": "",
+    "Website": "https://github.com/MichielvanBeers/Flow.Launcher.Plugin.ChatGPT",
     "IcoPath": "Images\\app.png",
     "ExecuteFileName": "main.py"
 }
