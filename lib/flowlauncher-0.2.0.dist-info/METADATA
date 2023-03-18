@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: flowlauncher
+Version: 0.2.0
+Summary: Flow Launcher supports Python by JsonRPC.
+Home-page: https://github.com/Flow-Launcher/Flow.Launcher.JsonRPC.Python
+Download-URL: https://github.com/Flow-Launcher/Flow.Launcher.JsonRPC.Python/archive/master.zip
+Author: Flow-Launcher
+Author-email: Zeroto521@gmail.com
+Maintainer: Zero
+Maintainer-email: Zeroto521@gmail.com
+License: MIT
+Platform: Windows
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Flow.Launcher.JsonRPC.Python
+
+[![](https://img.shields.io/pypi/v/flowlauncher.svg?style=for-the-badge)](https://pypi.org/project/flowlauncher/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/flowlauncher?style=for-the-badge)](https://pypi.org/project/flowlauncher/)
+
+Flow Launcher supports Python by JsonRPC.
+
+## JSON-RPC
+
+> [JSON-RPC](https://en.wikipedia.org/wiki/JSON-RPC) is a remote procedure call protocol encoded in JSON.
+
+In Flow Launcher, we use JSON-RPC as a **local** procedure call protocol to bind Flow and other program languages.
+
+So we need to build a **common API** between Flow and Plugin.
+
+![JsonRPC](./assets/jsonrpc.png)
+
+### Example
+
+- `-->` denotes data sent to FLow.
+- `<--` denotes data coming from Flow.
+
+```json
+--> {"method": "query", "parameters": [""]}
+<-- {"Title": "title", "SubTitle": "sub title", "IconPath": "favicon.ico"}
+```
+
+<!-- TODO: try to add some other examples -->
+
+## Installation
+
+### Using `pip`
+
+``` bash
+>>> pip install flowlauncher
+```
+
+### Using `pip` + `git`
+
+``` bash
+>>> pip install git+https://github.com/Flow-Launcher/Flow.Launcher.JsonRPC.Python.git
+```
+
+### Using `git`
+
+``` bash
+>>> git clone https://github.com/Flow-Launcher/Flow.Launcher.JsonRPC.Python.git
+>>> cd Flow.Launcher.JsonRPC.Python
+>>> python setup.py install
+```
+
+<!-- TODO: update Example Plugin (HellowWorldPython) for this plugin -->
+
+### License
+
+This project is under the [MIT](./LICENSE) license.
+
+Some of the orignal codes from [JsonRPC/wox.py](https://github.com/Wox-launcher/Wox/blob/master/JsonRPC/wox.py) which is under the [MIT](https://github.com/Wox-launcher/Wox/blob/master/LICENSE) license.

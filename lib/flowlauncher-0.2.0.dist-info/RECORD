@@ -1,0 +1,15 @@
+flowlauncher-0.2.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+flowlauncher-0.2.0.dist-info/LICENSE,sha256=ghgUeUeZuF3zrJuPItKQfHORRmO9dfY_TFUUtkarxL4,1070
+flowlauncher-0.2.0.dist-info/METADATA,sha256=dm4FVJ6W7D4H_HB-M_0nLIuRcIRWeu6qTgxD0ozFiCs,2882
+flowlauncher-0.2.0.dist-info/RECORD,,
+flowlauncher-0.2.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flowlauncher-0.2.0.dist-info/WHEEL,sha256=ZL1lC_LiPDNRgDnOl2taCMc83aPEUZgHHv2h-LDgdiM,92
+flowlauncher-0.2.0.dist-info/top_level.txt,sha256=6w21mpB53RUVYxLbLn9bJusgNZKy0BBdP0HtBTDB6WM,13
+flowlauncher/FlowLauncher.py,sha256=_6uLoP7sJYKRvvJXTFSZ3QfIu-Xc_fCs2r0MkgEaOh4,1450
+flowlauncher/FlowLauncherAPI.py,sha256=Tq3AS_PyHGAgtS5avAocLKruPESoo70l3x8GO6-gxl4,2267
+flowlauncher/__init__.py,sha256=aIG4Da4cmfLfXwX99tc6BUX-yuYtropTV5XSEzCDwJo,307
+flowlauncher/__pycache__/FlowLauncher.cpython-310.pyc,,
+flowlauncher/__pycache__/FlowLauncherAPI.cpython-310.pyc,,
+flowlauncher/__pycache__/__init__.cpython-310.pyc,,
+flowlauncher/__pycache__/_version.cpython-310.pyc,,
+flowlauncher/_version.py,sha256=N1B1W-NeZ6MiRBIgcAjQ6l7RMePfWtsFi7Qs8ENzGSo,497

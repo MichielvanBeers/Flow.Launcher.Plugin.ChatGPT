@@ -1,0 +1,27 @@
+body:
+  - type: passwordBox
+    attributes:
+      name: api_key
+      label: "API Key:"
+      defaultValue: ""
+      description: OpenAI API Key
+  - type: dropdown
+    attributes:
+      name: model
+      label: "Model:"
+      defaultValue: gpt-3.5-turbo
+      options:
+        - gpt-3.5-turbo
+        - gpt-4
+  - type: input
+    attributes:
+      name: prompt_stop
+      label: "Prompt stop:"
+      defaultValue: "||"
+      description: Characters to indicate end of prompt
+  - type: input
+    attributes:
+      name: default_prompt
+      label: "Default system prompt:"
+      defaultValue: "normal"
+      description: Default key word that will be looked up in the system_messages.csv file

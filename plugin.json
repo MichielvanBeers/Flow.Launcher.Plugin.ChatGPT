@@ -1,0 +1,12 @@
+{
+    "ID": "df432fe0-9ff7-4ba1-b0fd-5ffd26efbf86",
+    "ActionKeyword": "ai",
+    "Name": "ChatGPT",
+    "Description": "Plugin to link OpenAI's ChatGPT to Flow Launcher",
+    "Author": "Flow Launcher",
+    "Version": "0.0.1",
+    "Language": "python",
+    "Website": "",
+    "IcoPath": "Images\\app.png",
+    "ExecuteFileName": "main.py"
+}
