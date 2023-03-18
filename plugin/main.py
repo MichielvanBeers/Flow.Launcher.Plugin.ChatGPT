@@ -59,6 +59,7 @@ class ChatGPT(Flox):
             )
         return result
 
+
     def query(self, query: str) -> None:
         if not self.api_key:
             self.add_item(
@@ -98,6 +99,7 @@ class ChatGPT(Flox):
             answer = self.send_prompt(prompt, system_message)
 
             if answer:
+                answer = answer.lstrip("\n").lstrip("\n")
                 self.add_item(
                     title="Copy to clipboard",
                     subtitle=f"Answer: {answer[:40]}...",
