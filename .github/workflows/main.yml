@@ -7,6 +7,9 @@ on:
     paths-ignore: 
       - .github/workflows/*
       
+permissions:
+  contents: write
+      
 jobs:
   publish:
     runs-on: ubuntu-latest
