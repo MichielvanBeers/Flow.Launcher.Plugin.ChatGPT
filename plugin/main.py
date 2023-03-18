@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 import os
+import csv
 from flox import Flox  # noqa: E402
 import webbrowser  # noqa: E402
 import requests  # noqa: E402
 import json  # noqa: E402
 import pyperclip  # noqa: E402
-import pandas as pd  # noqa: E402
 
 
 class ChatGPT(Flox):
@@ -17,9 +17,8 @@ class ChatGPT(Flox):
         self.default_system_prompt = self.settings.get("default_prompt")
 
         try:
-            self.prompts = pd.read_csv(
-                "system_messages.csv", encoding="utf-8", delimiter=";"
-            )
+            self.csv_file = open("system_messages.csv", encoding="utf-8", mode="r")
+            self.prompts = csv.DictReader(self.csv_file, delimiter=";")
         except FileNotFoundError:
             self.prompts = None
 
@@ -64,13 +63,19 @@ class ChatGPT(Flox):
         if not self.api_key:
             self.add_item(
                 title="Unable to load the API key",
-                subtitle="Please make sure you've added a valid API key in the settings.",
+                subtitle="""
+                Please make sure you've added 
+                a valid API key in the settings.
+                """,
             )
             return
         if self.prompts is None:
             self.add_item(
                 title="Unable to load the system prompts from CSV",
-                subtitle="Please valid that the plugins folder contains a valid system_prompts.csv",
+                subtitle="""
+                Please validate that the plugins folder
+                contains a valid system_prompts.csv
+                """,
                 method=self.open_plugin_folder,
             )
             return
@@ -78,16 +83,17 @@ class ChatGPT(Flox):
             prompt = query.rstrip(self.prompt_stop)
             prompt_key_word = prompt.split(" ")[0].lower()
 
-            if prompt_key_word in self.prompts["Key Word"].values:
-                system_message = self.prompts.loc[
-                    self.prompts["Key Word"] == prompt_key_word, "System Message"
-                ].iloc[0]
-                prompt = prompt.split(" ", 1)[1]
-            else:
-                system_message = self.prompts.loc[
-                    self.prompts["Key Word"] == self.default_system_prompt,
-                    "System Message",
-                ].iloc[0]
+            system_message = ""
+
+            for row in self.prompts:
+                if row["Key Word"] == prompt_key_word:
+                    system_message = row["System Message"]
+                    prompt = prompt.split(" ", 1)[1]
+
+            if not system_message:
+                for row in self.prompts:
+                    if row["Key Word"] == self.default_system_prompt:
+                        system_message = row["System Message"]
 
             answer = self.send_prompt(prompt, system_message)
 
@@ -128,6 +134,9 @@ class ChatGPT(Flox):
 
     def open_plugin_folder(self) -> None:
         webbrowser.open(os.getcwd())
+
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        self.csv_file.close()
 
 
 if __name__ == "__main__":
