@@ -32,12 +32,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r ./requirements.txt -t ./lib
-          zip -r Flow.Launcher.Plugin.HelloWorldPython.zip . -x '*.git*'
+          zip -r Flow.Launcher.Plugin.ChatGPT.zip . -x '*.git*'
       - name: Publish
         if: success()
         uses: softprops/action-gh-release@v1
         with:
-          files: 'Flow.Launcher.Plugin.HelloWorldPython.zip'
+          files: 'Flow.Launcher.Plugin.ChatGPT.zip'
           tag_name: "v${{steps.version.outputs.prop}}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
