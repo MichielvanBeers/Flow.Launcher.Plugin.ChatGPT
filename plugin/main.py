@@ -2,6 +2,7 @@
 
 import os
 import csv
+import re
 from flox import Flox  # noqa: E402
 import webbrowser  # noqa: E402
 import requests  # noqa: E402
@@ -100,15 +101,17 @@ class ChatGPT(Flox):
 
             if answer:
                 answer = answer.lstrip("\n").lstrip("\n")
+                short_answer = self.ellipsis(answer, 30)
+
                 self.add_item(
                     title="Copy to clipboard",
-                    subtitle=f"Answer: {answer[:40]}...",
+                    subtitle=f"Answer: {short_answer}",
                     method=self.copy_answer,
                     parameters=[answer],
                 )
-                self.add_item(
+                self.add_item( 
                     title="Open in text editor",
-                    subtitle=f"Answer: {answer[:40]}...",
+                    subtitle=f"Answer: {short_answer}",
                     method=self.open_in_editor,
                     parameters=[answer],
                 )
@@ -118,6 +121,10 @@ class ChatGPT(Flox):
                 subtitle=f"Current model: {self.model}",
             )
         return
+    
+    def ellipsis(self, string: str, length: int):
+        string = string.split('\n', 1)[0]
+        return string[:length-3] + '...' if len(string) > length else string
 
     def copy_answer(self, answer: str) -> None:
         """
