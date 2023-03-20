@@ -2,7 +2,6 @@
 
 import os
 import csv
-import re
 from flox import Flox  # noqa: E402
 import webbrowser  # noqa: E402
 import requests  # noqa: E402
