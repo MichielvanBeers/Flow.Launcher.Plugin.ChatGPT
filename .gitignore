@@ -130,3 +130,4 @@ dmypy.json
 # Config and temp plugin files
 system_messages.csv
 temp_text.txt
+Conversations *.txt

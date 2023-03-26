@@ -25,3 +25,20 @@ body:
       label: "Default system prompt:"
       defaultValue: "normal"
       description: Default key word that will be looked up in the system_messages.csv file
+  - type: checkbox
+    attributes:
+      name: save_conversation
+      label: 'Save conversation:'
+      defaultValue: "false"
+      description: Check to save the conversations for each prompt type in a .txt file in the plugin folder
+  - type: dropdown
+    attributes:
+      name: log_level
+      label: "Log Level:"
+      defaultValue: error
+      options:
+        - info
+        - debug
+        - warning
+        - error
+        - critical
