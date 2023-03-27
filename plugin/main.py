@@ -9,6 +9,7 @@ import webbrowser  # noqa: E402
 import requests  # noqa: E402
 import json  # noqa: E402
 import pyperclip  # noqa: E402
+from typing import Tuple
 
 
 class ChatGPT(Flox):
@@ -87,7 +88,7 @@ class ChatGPT(Flox):
 
     def send_prompt(
         self, prompt: str, system_message: str
-    ) -> tuple[str, datetime, datetime]:
+    ) -> Tuple[str, datetime, datetime]:
         """
         Query the OpenAI end-point
         """
