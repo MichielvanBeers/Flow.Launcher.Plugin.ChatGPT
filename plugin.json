@@ -4,7 +4,11 @@
     "Name": "ChatGPT",
     "Description": "Plugin to use OpenAI's ChatGPT in Flow Launcher",
     "Author": "Flow Launcher",
+<<<<<<< HEAD
     "Version": "1.1.0",
+=======
+    "Version": "1.0.4",
+>>>>>>> e7ab084b005a8ed1722cb3a55151fdcd5592444c
     "Language": "python",
     "Website": "https://github.com/MichielvanBeers/Flow.Launcher.Plugin.ChatGPT",
     "IcoPath": "Images\\app.png",
