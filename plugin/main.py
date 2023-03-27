@@ -9,7 +9,7 @@ import webbrowser  # noqa: E402
 import requests  # noqa: E402
 import json  # noqa: E402
 import pyperclip  # noqa: E402
-from typing import Tuple
+from typing import Tuple, Optional
 
 
 class ChatGPT(Flox):
@@ -207,7 +207,7 @@ class ChatGPT(Flox):
         """
         pyperclip.copy(answer)
 
-    def open_in_editor(self, filename: str | None, answer: str | None) -> None:
+    def open_in_editor(self, filename: Optional[str], answer: Optional[str]) -> None:
         """
         Open the answer in the default text editor. If no filename is given,
         the conversation will be written to a new text file and opened.
