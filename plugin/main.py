@@ -184,6 +184,8 @@ class ChatGPT(Flox):
 
         if len(prompt_array) == 1:
             prompt = prompt_array[0]
+        else:
+            prompt = prompt.split(' ', 1)[1]
 
         logging.debug(
             f"""
