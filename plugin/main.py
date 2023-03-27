@@ -164,7 +164,7 @@ class ChatGPT(Flox):
 
         return filename
 
-    def split_prompt(self, query: str) -> tuple[str, str, str]:
+    def split_prompt(self, query: str) -> Tuple[str, str, str]:
         prompt = query.rstrip(self.prompt_stop).strip()
         prompt_array = prompt.split(" ")
         prompt_keyword = prompt_array[0].lower()
