@@ -35,19 +35,15 @@ class ChatGPT(Flox):
         if not self.api_key:
             self.add_item(
                 title="Unable to load the API key",
-                subtitle="""
-                Please make sure you've added 
-                a valid API key in the settings.
-                """,
+                subtitle=(
+                    "Please make sure you've added a valid API key in the settings"
+                ),
             )
             return
         if self.prompts is None:
             self.add_item(
                 title="Unable to load the system prompts from CSV",
-                subtitle="""
-                Please validate that the plugins folder
-                contains a valid system_prompts.csv
-                """,
+                subtitle="Please validate that the plugins folder contains a valid system_prompts.csv",  # noqa: E501
                 method=self.open_plugin_folder,
             )
             return
