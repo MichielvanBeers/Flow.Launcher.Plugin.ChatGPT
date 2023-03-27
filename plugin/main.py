@@ -55,7 +55,6 @@ class ChatGPT(Flox):
             )
 
             filename = None
-            prompt = prompt + system_message
             if self.save_conversation_setting:
                 filename = self.save_conversation(
                     prompt_keyword, prompt, prompt_timestamp, answer, answer_timestamp
