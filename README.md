@@ -15,18 +15,17 @@ This plugin allows you to use the OpenAI's ChatGPT models (gpt-3.5-turbo and gpt
 2. An API key for OpenAI that can be retrieved [here](https://platform.openai.com/account/api-keys)
 
 ## Installation
-0. Download and install [Flow Launcher](https://www.flowlauncher.com/).
-1. Go to the [Releases overview](https://github.com/MichielvanBeers/Flow.Launcher.Plugin.ChatGPT/releases)
-2. Download the latest .zip file
+1. Download and install [Flow Launcher](https://www.flowlauncher.com/).
+2. Go to the [Releases overview](https://github.com/MichielvanBeers/Flow.Launcher.Plugin.ChatGPT/releases)
 3. Open Flow Launcher settings by entering `Settings` in Flow Launcher
-4. Go the `Plugins module`
-5. Open any plugin and click on the small folder icon in the bottom right
-6. Navigate one folder up to the `Plugins` folder
-7. Extract the .zip folder of step 2
-8. Restart `Flow Launcher`
-9. Go to the `Plugins Module` in Flow Launcher
-10. The ChatGPT should now be visible
+4. Go the `Plugin Store` module
+5. Search for `ChatGPT`
+6. Click `ChatGPT` and then `Install` 
+8. `Flow Launcher` should automatically restart. If not, Restart `Flow Launcher`
+9. Go to the `Plugins` module in Flow Launcher
+10. The ChatGPT plugin should be visible
 11. Paste your OpenAI API key in the API Key field
+12. Adjusting the setting (see below) to your own liking.
 
 ## Usage
 ### Basic
