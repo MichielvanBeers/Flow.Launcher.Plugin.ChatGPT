@@ -142,7 +142,7 @@ class ChatGPT(Flox):
         filename = f"Conversations '{keyword}' keyword.txt"
         formatted_prompt_timestamp = prompt_timestamp.strftime("%Y-%m-%d %H:%M:%S")
         formatted_answer_timestamp = answer_timestamp.strftime("%Y-%m-%d %H:%M:%S")
-        new_content = f"""[{formatted_prompt_timestamp}] User: {prompt}\n[{formatted_answer_timestamp}] ChatGPT: {answer}\n"""  # noqa: E501
+        new_content = f"[{formatted_prompt_timestamp}] User: {prompt}\n[{formatted_answer_timestamp}] ChatGPT: {answer}\n\n"  # noqa: E501
 
         if os.path.exists(filename):
             try:
