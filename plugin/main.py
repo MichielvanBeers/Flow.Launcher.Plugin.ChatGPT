@@ -174,6 +174,7 @@ class ChatGPT(Flox):
         for row in self.prompts:
             if row["Key Word"] == prompt_keyword:
                 system_message = row["System Message"]
+                prompt = prompt.split(' ', 1)[1]
 
         if not system_message:
             prompt_keyword = self.default_system_prompt
@@ -184,8 +185,6 @@ class ChatGPT(Flox):
 
         if len(prompt_array) == 1:
             prompt = prompt_array[0]
-        else:
-            prompt = prompt.split(' ', 1)[1]
 
         logging.debug(
             f"""
