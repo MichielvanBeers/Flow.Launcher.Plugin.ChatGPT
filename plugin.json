@@ -3,7 +3,7 @@
     "ActionKeyword": "ai",
     "Name": "ChatGPT",
     "Description": "Plugin to use OpenAI's ChatGPT in Flow Launcher",
-    "Author": "Flow Launcher",
+    "Author": "MichielvanBeers",
     "Version": "1.1.0",
     "Language": "python",
     "Website": "https://github.com/MichielvanBeers/Flow.Launcher.Plugin.ChatGPT",
