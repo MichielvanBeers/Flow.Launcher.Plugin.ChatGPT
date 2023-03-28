@@ -61,3 +61,6 @@ You can add your own prompts by opening `system_messages.csv` adding a Key Word 
 |Model|Model that will be used to call the API. Note: you need access to the model to be able to use it.|_gpt-3.5-turbo_|
 |Prompt stop|Characters at the end of the sentence that will trigger the search| &#124;&#124; |
 |Defaul system prompt|The default key word that will be used to lookup a System Prompt when no specific prompt has been given| _normal_ |
+
+# Backlog
+* Ability to take into account the context of the previous prompts
