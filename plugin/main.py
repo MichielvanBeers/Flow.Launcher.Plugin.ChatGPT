@@ -11,6 +11,11 @@ import json  # noqa: E402
 import pyperclip  # noqa: E402
 from typing import Tuple, Optional
 
+PROXIES = {
+    "http": os.environ.get("HTTP_PROXY", ""),
+    "https": os.environ.get("HTTPS_PROXY", ""),
+}
+
 
 class ChatGPT(Flox):
     def __init__(self):
@@ -114,7 +119,9 @@ class ChatGPT(Flox):
 
         prompt_timestamp = datetime.now()
         logging.debug(f"Sending request with data: {data}")
-        response = requests.request("POST", url, headers=headers, data=data)
+        response = requests.request(
+            "POST", url, headers=headers, data=data, proxies=PROXIES
+        )
         logging.debug(f"Response: {response}")
         answer_timestamp = datetime.now()
 
@@ -174,7 +181,7 @@ class ChatGPT(Flox):
         for row in self.prompts:
             if row["Key Word"] == prompt_keyword:
                 system_message = row["System Message"]
-                prompt = prompt.split(' ', 1)[1]
+                prompt = prompt.split(" ", 1)[1]
 
         if not system_message:
             prompt_keyword = self.default_system_prompt
