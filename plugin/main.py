@@ -154,7 +154,7 @@ class ChatGPT(Flox):
 
         if os.path.exists(filename):
             try:
-                with open(filename, "r") as file:
+                with open(filename, "r", encoding="utf-8") as file:
                     existing_content = file.read()
             except PermissionError:
                 logging.error(PermissionError)
@@ -164,7 +164,7 @@ class ChatGPT(Flox):
         new_content = new_content + existing_content
 
         try:
-            with open(filename, "w") as file:
+            with open(filename, "w", encoding="utf-8") as file:
                 file.write(new_content)
         except PermissionError:
             logging.error(PermissionError)
@@ -224,7 +224,7 @@ class ChatGPT(Flox):
 
         if answer:
             temp_file = "temp_text.txt"
-            with open(temp_file, "w") as f:
+            with open(temp_file, "w", encoding="utf-8") as f:
                 f.write(answer)
             webbrowser.open(temp_file)
             return
