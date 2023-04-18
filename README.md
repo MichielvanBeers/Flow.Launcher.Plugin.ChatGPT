@@ -34,7 +34,7 @@ This plugin allows you to use the OpenAI's ChatGPT models (gpt-3.5-turbo and gpt
 3. Wait until the list is updated
 4. Copy the content or open in a new text file
 
-### Adding system prompts
+### Using system prompts
 System prompts are the messages that are being send to ChatGPT to set the behavior of the responses. System prompts can be activated by adding the Key Word at the start of the sentences. When no Key Word is found, the default system prompt will be used (see below).
 
 By default the plugin contains the following system prompts:
@@ -51,7 +51,18 @@ The different outputs for the prompt "Test" are as follows:
 |short|Passed.|
 |long|As an all-knowing AI bot, when I receive the input "test," I determine whether you are asking me to provide a test-related response or evaluate my knowledge and capabilities. Here, your query is brief and ambiguous, but I will provide an example of how I process and respond to questions. Step 1: Analyze the input: I examine the key term "test" and search for relevant context or additional details to understand your intention. Step 2: Generate a response: Based on your input, I try to cover the evident possibilities in my reply, thus accommodating your potential purpose. This includes testing my understanding, problem-solving capabilities, or demonstrating my knowledge on a specific topic. Step 3: Retrieve relevant resources: Since you did not provide specific details with your query, I cannot include references or resources that support my response. However, a more contextually-rich question will allow me to conduct comprehensive research and cite appropriate resources If you can provide additional information or clarify the context for your query, I will be able to generate an in-depth response based on your request. 
 
-You can add your own prompts by opening `system_messages.csv` adding a Key Word (without spaces) and a System Prompts that can be used. Check out [this Github page](github.com/f/awesome-chatgpt-prompts) for some awesome prompts.
+## Adding your own system prompts
+You can add your own prompts in the following way:
+1. Open Flow Launcher
+2. Type Settings
+3. Go to Plugins > ChatGPT
+4. Click the small folder icon
+5. In the folder that opens, open `system_messages.csv` 
+6. In the first column add the Key Word (without spaces) 
+7. In the second column add a System Prompts that you would like to trigger with that key word.
+8. Save the file
+
+Check out [this Github page](github.com/f/awesome-chatgpt-prompts) for some awesome prompts.
 
 ## Settings
 |Setting|Description|Default value|
