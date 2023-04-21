@@ -12,7 +12,8 @@ This plugin allows you to use the OpenAI's ChatGPT models (gpt-3.5-turbo and gpt
 
 ## Prerequisites
 1. An account at OpenAI
-2. An API key for OpenAI that can be retrieved [here](https://platform.openai.com/account/api-keys)
+2. A payment method configuration on your profile [here](https://platform.openai.com/account/billing/payment-methods)
+3. An API key for OpenAI that can be retrieved [here](https://platform.openai.com/account/api-keys)
 
 ## Installation
 1. Download and install [Flow Launcher](https://www.flowlauncher.com/).
