@@ -27,6 +27,7 @@ This plugin allows you to use the OpenAI's ChatGPT models (gpt-3.5-turbo and gpt
 10. The ChatGPT plugin should be visible
 11. Paste your OpenAI API key in the API Key field
 12. Adjusting the setting (see below) to your own liking.
+13. Run the 'Save Settings' command in Flow Launcher
 
 ## Usage
 ### Basic
