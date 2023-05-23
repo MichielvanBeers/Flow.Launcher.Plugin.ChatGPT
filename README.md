@@ -42,9 +42,9 @@ System prompts are the messages that are being send to ChatGPT to set the behavi
 By default the plugin contains the following system prompts:
 |Key Word | System Prompt |
 |---------|---------------|
-|normal|You are an all-knowning AI bot|
-|short|You are an all-knowning AI bot. All your answers are short, to the point and don't give any additional context.|
-|long|You are an all-knowning AI bot. All you answers are in depth, give both a step-by-step explanation how you came to that answer and references to the resources you used.|
+|normal|You are an all-knowing AI bot.|
+|short|You are an all-knowing AI bot. All your answers are short, to the point, and don't give any additional context.|
+|long|You are an all-knowing AI bot. All your answers are in-depth and give both a step-by-step explanation how you came to that answer, as well as references to the resources you used.|
 
 The different outputs for the prompt "Test" are as follows:
 |Key word| Output|
