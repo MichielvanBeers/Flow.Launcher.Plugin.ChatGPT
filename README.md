@@ -1,53 +1,52 @@
 # Flow Launcher ChatGPT Plugin
-This plugin allows you to use the OpenAI's ChatGPT models (gpt-3.5-turbo and gpt-4) with [Flow Launcher](https://www.flowlauncher.com/).
+This plugin allows you to use OpenAI's ChatGPT models (gpt-3.5-turbo and gpt-4) with [Flow Launcher](https://www.flowlauncher.com/).
 
 ![Demo video of the Flow Launcher ChatGPT Plugin](https://i.imgur.com/WQwNY7y.gif)
 
 ## Features
 - 💡 Set which chat model you want to use (gpt-3.5-turbo or gpt-4)
 - 📝 Use keywords to select if you want a short, long or standard answer
-- 💬 Add custom key words and system prompts to change the style and content of the output
-- 🗃️ Copy the answer or open in a new text file
-- ✋ Add custom stop word to activate the query
+- 💬 Add custom keywords and system prompts to change the style and content of the output
+- 🗃️ Copy the answer or open it in a new text file
+- ✋ Activate the query via a custom "stop keyword"
 
 ## Prerequisites
-1. An account at OpenAI
-2. A payment method configuration on your profile [here](https://platform.openai.com/account/billing/payment-methods)
-3. An API key for OpenAI that can be retrieved [here](https://platform.openai.com/account/api-keys)
+1. An account at OpenAI.
+2. A payment method configured in your OpenAI profile [here](https://platform.openai.com/account/billing/payment-methods).
+3. An API key for OpenAI that can be retrieved [here](https://platform.openai.com/account/api-keys).
 
 ## Installation
 1. Download and install [Flow Launcher](https://www.flowlauncher.com/).
-2. Go to the [Releases overview](https://github.com/MichielvanBeers/Flow.Launcher.Plugin.ChatGPT/releases)
-3. Open Flow Launcher settings by entering `Settings` in Flow Launcher
-4. Go the `Plugin Store` module
-5. Search for `ChatGPT`
-6. Click `ChatGPT` and then `Install` 
-8. `Flow Launcher` should automatically restart. If not, Restart `Flow Launcher`
-9. Go to the `Plugins` module in Flow Launcher
-10. The ChatGPT plugin should be visible
-11. Paste your OpenAI API key in the API Key field
-12. Adjusting the setting (see below) to your own liking.
-13. Run the 'Save Settings' command in Flow Launcher
+2. Launch Flow Launcher, then enter `Settings` to open its settings.
+3. Go to the `Plugin Store` module.
+4. Search for `ChatGPT`.
+5. Click `ChatGPT` and then `Install`.
+6. `Flow Launcher` should automatically restart. If not, manually restart `Flow Launcher`.
+7. Go to the `Plugins` module in Flow Launcher.
+8. The ChatGPT plugin should be visible. Select it.
+9. Paste your OpenAI API key in the API Key field.
+10. Adjust the setting (see below) to your own liking.
+11. Run the 'Save Settings' command in Flow Launcher.
 
 ## Usage
 ### Basic
-1. Activate by using the `ai` key word
-2. Type any prompt and add the stop keyword at the end (default: `||`)
-3. Wait until the list is updated
-4. Copy the content or open in a new text file
+1. Activate by using the `ai` keyword.
+2. Type any prompt and add the stop keyword at the end (default: `||`).
+3. Wait until the list is updated.
+4. Copy the content or open it in a new text file.
 
 ### Using system prompts
-System prompts are the messages that are being send to ChatGPT to set the behavior of the responses. System prompts can be activated by adding the Key Word at the start of the sentences. When no Key Word is found, the default system prompt will be used (see below).
+System prompts are the messages that are being sent to ChatGPT to set the behavior of the responses. System prompts can be activated by adding a Keyword at the start of the sentences. When no Keyword is found, the default system prompt will be used (see below).
 
 By default the plugin contains the following system prompts:
-|Key Word | System Prompt |
+|Keyword | System Prompt |
 |---------|---------------|
 |normal|You are an all-knowing AI bot.|
 |short|You are an all-knowing AI bot. All your answers are short, to the point, and don't give any additional context.|
 |long|You are an all-knowing AI bot. All your answers are in-depth and give both a step-by-step explanation how you came to that answer, as well as references to the resources you used.|
 
 The different outputs for the prompt "Test" are as follows:
-|Key word| Output|
+|Keyword| Output|
 |--------|-------|
 |normal|I'm here to help. How may I assist you with your test?|
 |short|Passed.|
@@ -55,25 +54,25 @@ The different outputs for the prompt "Test" are as follows:
 
 ## Adding your own system prompts
 You can add your own prompts in the following way:
-1. Open Flow Launcher
-2. Type Settings
-3. Go to Plugins > ChatGPT
-4. Click the small folder icon
-5. In the folder that opens, open `system_messages.csv` 
-6. In the first column add the Key Word (without spaces) 
-7. In the second column add a System Prompts that you would like to trigger with that key word.
-8. Save the file
+1. Open Flow Launcher.
+2. Type `Settings`.
+3. Go to Plugins -> ChatGPT.
+4. Click the small folder icon.
+5. In the folder that opens, open `system_messages.csv`.
+6. In the first column, add a new Keyword (without spaces).
+7. In the second column, add the System Prompt that you would like to trigger with that Keyword.
+8. Save the file.
 
-Check out [this Github page](github.com/f/awesome-chatgpt-prompts) for some awesome prompts.
+Check out [this Github page](https://github.com/f/awesome-chatgpt-prompts) for some awesome prompts.
 
 ## Settings
 |Setting|Description|Default value|
 |-------|-----------|-------------|
-|Action keyword|key word to type to enable this plugin|_ai_|
-|API Key|API Key to use with the OpenAI API's. Can be found [here](https://platform.openai.com/account/api-keys)|_none_|
-|Model|Model that will be used to call the API. Note: you need access to the model to be able to use it.|_gpt-3.5-turbo_|
+|Action keyword|keyword to type to enable this plugin|_ai_|
+|API Key|API Key to use with OpenAI's API's. Can be found [here](https://platform.openai.com/account/api-keys).|_none_|
+|Model|The ChatGPT model version that will be used to call the API. Note: you need access to the model to be able to use it.|_gpt-3.5-turbo_|
 |Prompt stop|Characters at the end of the sentence that will trigger the search| &#124;&#124; |
-|Defaul system prompt|The default key word that will be used to lookup a System Prompt when no specific prompt has been given| _normal_ |
+|Default system prompt|The default keyword that will be used to lookup a System Prompt when no specific prompt has been given.| _normal_ |
 
 # Backlog
-* Ability to take into account the context of the previous prompts
+* Ability to take into account the context of the previous prompts.
