@@ -17,6 +17,7 @@ body:
         - gpt-4-turbo-preview
         - gpt-4-1106-preview
         - gpt-4-0613
+        - gpt-4o
   - type: input
     attributes:
       name: prompt_stop
