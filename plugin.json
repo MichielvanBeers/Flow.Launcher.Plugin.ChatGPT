@@ -8,5 +8,13 @@
     "Language": "python",
     "Website": "https://github.com/MichielvanBeers/Flow.Launcher.Plugin.ChatGPT",
     "IcoPath": "Images\\app.png",
-    "ExecuteFileName": "main.py"
+    "ExecuteFileName": "main.py",
+    "Settings": {
+        "api_endpoint": {
+            "type": "input",
+            "label": "API Endpoint",
+            "defaultValue": "https://api.openai.com/v1/chat/completions",
+            "description": "Custom OpenAI API endpoint"
+        }
+    }
 }
