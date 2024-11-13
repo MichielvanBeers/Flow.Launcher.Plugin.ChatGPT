@@ -73,6 +73,7 @@ Check out [this Github page](https://github.com/f/awesome-chatgpt-prompts) for s
 |Model|The ChatGPT model version that will be used to call the API. Note: you need access to the model to be able to use it.|_gpt-3.5-turbo_|
 |Prompt stop|Characters at the end of the sentence that will trigger the search| &#124;&#124; |
 |Default system prompt|The default keyword that will be used to lookup a System Prompt when no specific prompt has been given.| _normal_ |
+|Custom URL|Custom OpenAI Format API endpoint|_https://api.openai.com/v1/chat/completions_|
 
 # Backlog
 * Ability to take into account the context of the previous prompts.
