@@ -25,6 +25,7 @@ class ChatGPT(Flox):
         self.default_system_prompt = self.settings.get("default_prompt")
         self.save_conversation_setting = self.settings.get("save_conversation")
         self.log_level = self.settings.get("log_level")
+        self.api_endpoint = self.settings.get("api_endpoint")
         self.logger_level(self.log_level)
 
         try:
@@ -84,6 +85,7 @@ class ChatGPT(Flox):
                     parameters=[filename, answer],
                 )
 
+
         else:
             self.add_item(
                 title=f"Type your prompt and end with {self.prompt_stop}",
@@ -97,7 +99,7 @@ class ChatGPT(Flox):
         """
         Query the OpenAI end-point
         """
-        url = "https://api.openai.com/v1/chat/completions"
+        url = self.api_endpoint
 
         headers = {
             "Authorization": "Bearer " + self.api_key,
@@ -119,9 +121,14 @@ class ChatGPT(Flox):
 
         prompt_timestamp = datetime.now()
         logging.debug(f"Sending request with data: {data}")
-        response = requests.request(
-            "POST", url, headers=headers, data=data, proxies=PROXIES
-        )
+        try:
+            response = requests.request(
+                "POST", url, headers=headers, data=data, proxies=PROXIES
+            )
+        except UnicodeEncodeError as e:
+            logging.error(f"UnicodeEncodeError: {e}")
+            return "", prompt_timestamp, datetime.now()
+
         logging.debug(f"Response: {response}")
         answer_timestamp = datetime.now()
 
@@ -228,6 +235,15 @@ class ChatGPT(Flox):
                 f.write(answer)
             webbrowser.open(temp_file)
             return
+
+    def display_answer(self, answer: str) -> None:
+        """
+        Display the answer directly.
+        """
+        self.add_item(
+            title="Answer",
+            subtitle=answer,
+        )
 
     def open_plugin_folder(self) -> None:
         webbrowser.open(os.getcwd())

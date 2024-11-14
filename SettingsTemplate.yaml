@@ -48,3 +48,9 @@ body:
         - warning
         - error
         - critical
+  - type: input
+    attributes:
+      name: api_endpoint
+      label: "API Endpoint:"
+      defaultValue: "https://api.openai.com/v1/chat/completions"
+      description: Custom OpenAI API endpoint
